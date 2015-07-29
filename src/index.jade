@@ -31,6 +31,66 @@ html
     .krang {
       background-image: url('images/krang.jpg')
     }
+    
+    .sampling {
+      background-image: url('images/sampling.jpg')
+    }
+    
+    .mindblown {
+      background-image: url('images/mind-blown.gif')
+    }
+    
+    .chumbawumba {
+      background-image: url('images/chumbawumba.png')
+    }
+    
+    .flux {
+      background-image: url('images/flux.png')
+    }
+    
+    .freq {
+      background-image: url('images/freq-response.jpg')
+    }
+    
+    .higher {
+      background-image: url('images/44v96.jpg')
+    }
+    
+    .telephone {
+      background-image: url('images/telephone.jpg')
+    }
+    
+    .mind-blown-again {
+      background-image: url('images/mindblown-at.gif')
+    }
+    
+    .chromatic {
+      background-image: url('images/chromatic.png')
+    }
+    
+    .pythagoras-three {
+      background-image: url('images/pyth3.jpg')
+    }
+    
+    .pythagoras-four {
+      background-image: url('images/pyth4.jpg')
+    }
+    
+    .pythagoras-five {
+      background-image: url('images/pyth5.jpg')
+    }
+    
+    .phish {
+      background-image: url('images/phish.jpg')
+    }
+    
+    .fifths {
+      background-image: url('images/circle-of-fifths.png')
+    }
+    
+    .diatonic {
+      background-image: url('images/diatonic.jpg')
+    }
 
   body
 
@@ -49,7 +109,7 @@ html
         
       section
         h1 My Name is Myles
-        img.headroom(src='images/me.jpg' alt='itsa me!')
+        img.headroom(src='images/me.jpg' alt='itsa me!' width='200px')
       
       section
         h2 I currently work at Famous Industries heading up the Famous.org project
@@ -102,12 +162,194 @@ html
       section(data-bespoke-backdrop='krang')
         h1 How our brains interpret it
         
+      section
+        h1 What is sampling?
         
       section
-        h2 Thank You
-        img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
-        h3 Myles Borins
-        h4 @thealphanerd
+        img(src='images/mpc.jpg' alt='not two tables and a microphone, just an mpc' width='500px')
+      
+      section
+        h2 Technically correct
+        h2 but let's dive deeper
+        
+      section(data-bespoke-backdrop='sampling')
+        h3 Sampling is the method of converting an analogue signal to digital data.
+        h3 Digital data which can eventually be turned back into an analogue signal.
+        
+      section
+        h3 While you can sample many things
+        h3 Today we are going to talk about sampling sound
+        img.headroom(src='images/dropthebass.gif' alt='drop the bass')
+
+      section
+        h2 We sample sound any time we make a digital recording. 
+        img.headroom(src='images/saywhat.gif')
+
+      section
+        h3 Unlike an analogue recording 
+        h3 which happens in constant time
+        h3 A digital recording needs to be represented in sampled blocks
+      
+      section(data-bespoke-backdrop='mindblown')
+        h1 You can think of a sample as a pixel for sound!
+        
+      section
+        h2 How about a quick primer on some audio slang
+        img.headroom(src='images/bloodsport.gif' alt='a humorous gif making a scene from bloodsport appear to be a band playing KUMITE')
+        
+      section
+        h2 Sample Rate
+        h3 The number of samples used to represent a second of sound
+        h4 A common Sample Rate is 44.1khz
+      
+      section
+        h2 "Bit Depth"
+        h3 The number of bits used to encode a single sample
+        h4 A common bit depth is 16bit
+
+      section
+        h2 "Codec"
+        h3 An algorithm used to encode an audio signal into digital data
+        h3 A very common codec is mp3
+
+      section
+        h1 Tying this all together
+
+      section(data-bespoke-backdrop='chumbawumba')
+        h2 A CD is encoded using PCM
+        h3 At 16 bits / sample
+        h3 At 44.1k samples / second
+
+      section
+        h3 The algorithm involves encoding each channel of sound
+        h3 as a floating point number between -1 and 1
+        h5 NOTE: this is a simplification only talking about the floating point implementation of PCM encoding.
+
+      section
+        h3 You can think of a PCM encoding as an array
+        h3 Each channel is "interleaved"
+        h4 [L0, R0, L1, R1, L2, R2... Ln, Rn]
+
+
+      section
+        h2 Many people will refer to this as a lossless encoding as almost no data is lost from the original source
+      
+      section
+        h2 An mp3, alternatively, does lossy encoding using pychoacoustic heuristics to decide which data is actually important
+
+      section
+        h1 What are the limitations of sampling?
+
+      section
+        img(src='images/Aliasing-folding.png' alt='PUSH IT TO THE NYQUIST LIMIT')
+
+      section
+        h1 You all got that right?
+
+      section
+        h3 It is something called the Nyquist limit
+
+      section
+        h3 Named after Harold Nyquist
+        img(src='images/harry.jpg' alt='handsome harold nyquist')
+        
+      section
+        h3 His work was built upon by Claude Shannon
+        p Creating what we know today to be the fields of Sampling and Information theory
+        
+      section
+        img(src='images/wat.jpg' alt='wat?')
+
+      section
+        h1 The Nyquist Limit
+
+      section
+        h3 Your sampling rate dictates the maximum frequency that can be represented in a system
+        h3 You can only represent a frequency equal to half the sampling rate of your signal.
+        h4 Anything higher ends up aliasing
+
+      section(data-bespoke-backdrop='flux')
+        h1 44.1 kHz
+        h3 not jigawatz
+
+      section
+        h2 This is a standard sampling rate used in audio
+        
+      section
+        img(src='images/why.jpg' alt='but why?')
+
+      section
+        img(src='images/ear.jpg' alt='because your ear silly')
+
+      section(data-bespoke-backdrop='freq')
+        h3 The human ear only hears frequencies
+        h3 up to around 20 kHz
+
+      section
+        h2 44.1 kHz is an optimization for compression.
+        p It minimizes the amount of data we need to sample.
+
+      section
+        h1 Why Sample Higher?
+
+      section(data-bespoke-backdrop='higher')
+        h2 96 kHz
+        h3 allows you to avoid aliasing
+
+      section(data-bespoke-backdrop='telephone')
+        h1 What does a lower sample rate sounds like?
+        h3 traditionally telephones are samples at 8 kHz
+
+      section
+        img(src='images/demo-time.png' alt='time for the first demo')
+
+      section
+        h3 Let's go back to the human ear for a second
+        h3 and talk about why music works
+
+      section
+        h3 Exponential response!
+        img(src='images/freq-response.jpg' alt='frequency response of the huan ear')
+
+      section
+        img(src='images/double.jpg' alt='as frequency increases exponentially, how we experience pitch increases linearly')
+
+      section(data-bespoke-backdrop='mind-blown-again')
+        h1 As frequency grows exponentially, we experience pitch linearly.
+        
+      section
+        h2 This was originally discovered by Pythagoras (afaik)
+        img.headroom(src='images/pyth1.jpg' alt='pythagoras')
+        
+      section
+        h2 Pythagoras discovered what we now know as the western musical cannon.
+        img.headroom(src='images/pyth2.jpg' alt='moar Pythagoras')
+
+      section(data-bespoke-backdrop='chromatic')
+          h1 The Chromatic Scale
+
+      section(data-bespoke-backdrop='pythagoras-three')
+        h1 Pythagoras
+
+      section(data-bespoke-backdrop='diatonic')
+        h1 The Diatonic Scale
+
+      section(data-bespoke-backdrop='pythagoras-four')
+        h1 Pythagoras
+
+      section(data-bespoke-backdrop='fifths')
+        //- h1 The Circle of Fifths
+
+      section(data-bespoke-backdrop='pythagoras-five')
+        h1 Pythagoras
+
+      section
+        h1 The greatest musical achievement in the modern era?
+
+      section(data-bespoke-backdrop='phish')
+        h1 Phish's Set two Rotation jam 
+        h3 Deer Creek Sunday August 10th 1997
+
       //- section
       //-   h2 Syntax Highlighting
       //-   h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
@@ -141,5 +383,11 @@ html
       //-     li
       //-       strong Enjoy! :)
       //-       a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+
+      section
+        h2 Thank You
+        img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
+        h3 Myles Borins
+        h4 @thealphanerd
 
     script(src='build/build.js')
