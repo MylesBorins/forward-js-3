@@ -1,0 +1,7 @@
+{
+  "name": "presentation-its-not-me-its-you",
+  "version": "0.0.0",
+  "dependencies": {
+    "prism": "gh-pages"
+  }
+}
