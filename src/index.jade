@@ -3,13 +3,33 @@ html
   head
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-    title It's not me it's you
+    title Signal Processing 101
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
 
   style.
-    .breakfast {
-      background-image: url('images/breakfast-machine.gif')
+    .hello {
+      background-image: url('images/hello-tharr.gif')
+    }
+    
+    .string-theory {
+      background-image: url('images/string-theory.jpg')
+    }
+    
+    .monome {
+      background-image: url('images/monome.jpg')
+    }
+    
+    .maxmsp {
+      background-image: url('images/maxmsp.png')
+    }
+    
+    .knoll {
+      background-image: url('images/knoll.jpg')
+    }
+    
+    .krang {
+      background-image: url('images/krang.jpg')
     }
 
   body
@@ -24,8 +44,65 @@ html
           #### [@thealphanerd](https://twitter.com/thealphanerd)
           forwardJS 3
 
+      section(data-bespoke-backdrop='hello')
+        h1 Hello There
+        
+      section
+        h1 My Name is Myles
+        img.headroom(src='images/me.jpg' alt='itsa me!')
       
+      section
+        h2 I currently work at Famous Industries heading up the Famous.org project
+        img.headroom(src='images/famous_logo.png' alt='Phi logo for Famous Industries')
+
+      section(data-bespoke-backdrop='string-theory')
+        h1 Believe it or not but I got into programming through art!
       
+      section
+        h2 String Theory
+        video.headroom(max-width='640', height='480', controls='')
+            source(src='images/string-theory.mp4', type='video/mp4')
+
+      section
+        h2 The Speaker Bot
+        video.headroom(max-width='640', height='480', controls='')
+            source(src='images/speakerbot.mp4', type='video/mp4')
+
+      section
+        h2 The Voxel Meter
+        video.headroom(max-width='640', height='480', controls='')
+            source(src='images/voxelmeter.mp4', type='video/mp4')
+
+
+      section(data-bespoke-backdrop='monome')
+        h1 It all started with a little device called the monome
+
+      section
+        h2 The monome introduced me 
+        h2  to a programming language called Max / MSP
+        img.headroom(src='images/maxmsp.png' alt='max/msp')
+        
+      section
+        h2 Max / MSP allows you to access to it's entire internal API through...
+
+      section
+        h1 JavaScript
+
+      section(data-bespoke-backdrop='knoll')
+        h2 My love of Music and Technology brought me to California
+        h2 to study at CCRMA
+        h4 The Center for Computer Research in Music and Acoustics
+        img.headroom(src='images/ccrma.jpg' alt='ccrma')
+
+      section
+        h2 While at CCRMA I had the opportunity to learn about sound.
+        h3 The math behind it, the physics behind it, how we compute it,
+        h3 and most interestingly...
+        
+      section(data-bespoke-backdrop='krang')
+        h1 How our brains interpret it
+        
+        
       section
         h2 Thank You
         img.headroom(src='images/best-gif-evar.gif' alt='a surfing puppy' width='20%')
